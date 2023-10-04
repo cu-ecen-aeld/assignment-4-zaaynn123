@@ -16,7 +16,15 @@ jobs:
             run: git submodule update --init --recursive
           - uses: webfactory/ssh-agent@v0.5.3
             with:
-                ssh-private-key: ${{ secrets.SSH_PRIVATE_KEY }}
+                ssh-private-key: -----BEGIN OPENSSH PRIVATE KEY-----
+b3BlbnNzaC1rZXktdjEAAAAACmFlczI1Ni1jdHIAAAAGYmNyeXB0AAAAGAAAABB+1NkTu5
+RP6Z/FPYSb/zU9AAAAEAAAAAEAAAAzAAAAC3NzaC1lZDI1NTE5AAAAIEE/MEaoMwQO9AmJ
+Ko8e+htiae7Jp72lXQdqq0iS82gEAAAAoOjdlSCX7+MkvzLV7wSXP7Up8YS0/UJFm0BVvJ
+2wNjgbSi2aVAhqj3C2ziMQYeo4IQ06sPah2TMx7Nb10q4FYNlJB4LK4r6WbXk4s7amXq0p
+cOPd1CEludIM++POAni4rsRBrHoBdqSE4+xv30kmXqtKcMgtGbNEj2Wss0zB2jgbjbAq/v
+BKGlkfpLDoqvnfsqwDdB1VK78yFZWtrihkeQ4=
+-----END OPENSSH PRIVATE KEY-----
+
           - name: Run full test
             env:
                 URL: ${{ secrets.URL }}
